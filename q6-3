@@ -1,0 +1,8 @@
+#!/bin/bash 
+for file in *; do 
+if [ -f "$file" ]; then 
+sed -i -e 's/([.[:space:]])ex:/\1Example:/g' "$file" 
+echo "Modified: $file" 
+fi 
+done 
+echo "Replacement completed!"
