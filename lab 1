@@ -1,0 +1,97 @@
+touch-
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ touch filen.txt
+
+
+ls-
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ ls
+file2.txt  file4.txt  ls.txt  newdir2  new.txt  ques2.txt  ques3.txt
+
+file-
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ file ls.txt
+ls.txt: Unicode text, UTF-8 text
+
+cat-
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ ls
+file2.txt  file4.txt  ls.txt  newdir2  new.txt  ques2.txt  ques3.txt
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ cat >> filex.txt
+HELLO WORLD
+HELLO INDIA
+HELLO
+MANIPAL
+
+head-
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ head -2 filex.txt
+HELLO WORLD
+HELLO INDIA
+
+tail-
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ tail filex.txt
+HELLO WORLD
+HELLO INDIA
+HELLO
+MANIPAL
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ tail -1 filex.txt
+MANIPAL
+
+cp-
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ cp -n ls.txt newdir2
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ cd newdir2/
+student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ ls
+file2.txt  file4.txt  filex.txt  ls.txt
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ cp -i filex.txt ques2.txt 
+cp: overwrite 'ques2.txt'? y
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ cat ques2.txt 
+HELLO WORLD
+HELLO INDIA
+HELLO
+MANIPAL
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ cp -f filex.txt ques3.txt 
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ cat ques3.txt 
+HELLO WORLD
+HELLO INDIA
+HELLO
+MANIPAL
+
+mv-
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ mv -f ques2.txt newdir2
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ cd newdir2/
+student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ ls
+newdir  ques2.txt
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ mv -i newdir newdir2
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ cd newdir2/
+student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ ls
+file2.txt  file4.txt  filex.txt  ls.txt  newdir
+
+rm-
+student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ rm -r ques2.txt 
+student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ ls
+file2.txt  file4.txt  newdir
+
+rmdir-
+student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ rmdir newdir/
+student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ ls
+file2.txt  file4.txt
+
+find-
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ find -name file2.txt
+./newdir2/file2.txt
+student@MIT-ICT-LAB8-5:~/230953054/Lab1$ find -type f
+./ls.txt
+./newdir
+./newdir2/file2.txt
+./newdir2/filex.txt
+./newdir2/file4.txt
+./new.txt
+
+Ques 3
+a) student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ ls
+file2.txt  file4.txt  filex.txt  ls.txt  newdir
+student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ ls *.txt
+file2.txt  file4.txt  filex.txt  ls.txt
+b) student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ ls *[0-9]* 
+file2.txt  file4.txt
+c) student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ ls ????*
+file2.txt  file4.txt  filex.txt  ls.txt  newdir
+d) student@MIT-ICT-LAB8-5:~/230953054/Lab1/newdir2$ ls [!a,e,i,o,u]*
+file2.txt  file4.txt  filex.txt  ls.txt  newdir
+
